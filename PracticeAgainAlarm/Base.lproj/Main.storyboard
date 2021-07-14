@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PracticeAgainAlarm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIZ-6T-1sy">
+                                <rect key="frame" x="30" y="129" width="354" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HaF-PJ-Vfv">
+                                <rect key="frame" x="30" y="166" width="44" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="A2u-aX-qpW">
+                                <rect key="frame" x="47" y="340" width="320" height="216"/>
+                                <connections>
+                                    <action selector="setAlarmWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="hdM-Ge-DiM"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pS0-6y-uO0">
+                                <rect key="frame" x="30" y="203" width="44" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZIZ-6T-1sy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="85" id="06k-Tn-7sb"/>
+                            <constraint firstItem="A2u-aX-qpW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0kA-zk-edK"/>
+                            <constraint firstItem="HaF-PJ-Vfv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="N1v-4p-T6i"/>
+                            <constraint firstItem="ZIZ-6T-1sy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OLJ-sI-QwQ"/>
+                            <constraint firstItem="pS0-6y-uO0" firstAttribute="top" secondItem="HaF-PJ-Vfv" secondAttribute="bottom" constant="15" id="P4k-MJ-Bwr"/>
+                            <constraint firstItem="HaF-PJ-Vfv" firstAttribute="top" secondItem="ZIZ-6T-1sy" secondAttribute="bottom" constant="15" id="PyP-NH-IPC"/>
+                            <constraint firstItem="pS0-6y-uO0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="RCl-K4-E5p"/>
+                            <constraint firstItem="A2u-aX-qpW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SmY-MR-ZH6"/>
+                            <constraint firstItem="ZIZ-6T-1sy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="WTA-Yz-r4A"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="alarmTimeLabel" destination="HaF-PJ-Vfv" id="qW4-Bo-E6P"/>
+                        <outlet property="currTimeLabel" destination="ZIZ-6T-1sy" id="87s-Sd-tb2"/>
+                        <outlet property="forCheck" destination="pS0-6y-uO0" id="iZB-yZ-z4a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="115.84821428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
